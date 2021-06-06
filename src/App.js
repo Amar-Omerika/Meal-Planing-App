@@ -12,12 +12,14 @@ const App = () => {
 
 	const getMealData = async () => {
 		const response = await fetch(
-			"https://api.spoonacular.com/recipes/716429/information?includeNutrition=false"
+			`https://api.spoonacular.com/mealplanner/generate?apiKey=${API_KEY}&timeFrame=day&targetCalories=${calories}`
 		);
 		const data = response.json();
 		console.log(data);
 	};
-	function handleChange() {}
+	function handleChange(event) {
+		setCalories(event.target.value);
+	}
 	return (
 		<div className="App">
 			<section className="controls">
