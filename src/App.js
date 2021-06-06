@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 const App = () => {
 	const [mealData, setMealData] = useState(null);
 	const [calories, setCalories] = useState(2000);
-	function handleChange() {}
+	useEffect(() => {
+		setMealData();
+	}, []);
 
+	const setMealData = async () => {};
 	return (
 		<div className="App">
 			<section className="controls">
 				<input
 					type="number"
 					placeholder="calories"
-					onChange={handleChange}
+					onChange={setMealData}
 				></input>
 			</section>
 		</div>
