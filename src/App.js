@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import "./App.css";
-import { useState } from "react";
 
 const App = () => {
 	const [mealData, setMealData] = useState(null);
+	const [calories, setCalories] = useState(2000);
+	function handleChange() {}
+
 	return (
 		<div className="App">
-			<h1>Test</h1>
+			<section className="controls">
+				<input
+					type="number"
+					placeholder="calories"
+					onChange={handleChange}
+				></input>
+			</section>
 		</div>
 	);
 };
