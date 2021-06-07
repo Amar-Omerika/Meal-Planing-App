@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Meal = ({ mealData }) => {
-	const nutrients = mealData.nutrients;
-	return <div>MealList</div>;
+const Meal = ({ meal }) => {
+	return <div>Meal</div>;
 };
 export default Meal;
