@@ -5,14 +5,14 @@ import "./App.css";
 const App = () => {
 	const [mealData, setMealData] = useState(null);
 	const [calories, setCalories] = useState(2000);
-	const API_KEY = " 5d18562865c34d779598cfa09921d69f";
+	const API_KEY = "5d18562865c34d779598cfa09921d69f";
 	useEffect(() => {
 		getMealData();
 	}, []);
 
 	const getMealData = async () => {
 		const response = await fetch(
-			`https://api.spoonacular.com/mealplanner/generate?apiKey=5d18562865c34d779598cfa09921d69f&timeFrame=day&targetCalories=${calories}`
+			`https://api.spoonacular.com/mealplanner/generate?apiKey=${API_KEY}&timeFrame=day&targetCalories=${calories}`
 		);
 		const data = await response.json();
 		setMealData(data);
@@ -31,6 +31,7 @@ const App = () => {
 				></input>
 			</section>
 			<button onClick={getMealData}>Get Daily Meal Plan</button>
+			{mealData && <MealList meaList={mealData} />}
 		</div>
 	);
 };
