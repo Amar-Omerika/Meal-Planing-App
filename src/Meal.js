@@ -5,8 +5,15 @@ const Meal = ({ meal }) => {
 	useEffect(() => {
 		fetch(
 			`https://api.spoonacular.com/recipes/${meal.id}/information?apiKey=5d18562865c34d779598cfa09921d69f&includeNutrition=false`
-		);
-	});
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				setImageURL(data.image);
+			})
+			.catch(() => {
+				console.log("Error");
+			});
+	}, [meal.id]);
 	return (
 		<article>
 			<h1>{meal.title}</h1>
