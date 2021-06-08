@@ -3,6 +3,7 @@ import Meal from "./Meal";
 
 const MealList = ({ mealData }) => {
 	const nutrients = mealData.nutrients;
+	console.log(mealData);
 	return (
 		<main>
 			<section className="nutrients">
