@@ -54,3 +54,14 @@ article {
 	max-width: 18rem;
 	box-shadow: 0 4px 8px 2px grey;
 }
+.instructions {
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+a {
+	text-decoration: none;
+	background-color: red;
+	color: white;
+	width: fit-content;
+	padding: 0, 5rem 1rem;
+}
