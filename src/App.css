@@ -46,3 +46,11 @@ img {
 	width: 100%;
 	margin-bottom: 1rem;
 }
+article {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	margin: 0 1rem;
+	max-width: 18rem;
+	box-shadow: 0 4px 8px 2px grey;
+}
