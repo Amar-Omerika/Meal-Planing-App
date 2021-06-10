@@ -25,7 +25,7 @@ const Meal = ({ meal }) => {
 			</ul>
 
 			<Button variant="contained" color="primary">
-				<a href={meal.sourceUrl}>Visit the Recipe</a>
+				<a href={meal.sourceUrl}>Go to Recipe</a>
 			</Button>
 		</article>
 	);
