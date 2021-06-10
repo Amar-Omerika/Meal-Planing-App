@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Button from "@material-ui/core/Button";
 
 const Meal = ({ meal }) => {
 	const [imageuRL, setImageURL] = useState("");
@@ -22,7 +23,10 @@ const Meal = ({ meal }) => {
 				<li>Preparation time: {meal.readyInMinutes} minutes</li>
 				<li>Number of servings : {meal.servings}</li>
 			</ul>
-			<a href={meal.sourceUrl}>Visit the Recipe</a>
+
+			<Button variant="contained" color="primary">
+				<a href={meal.sourceUrl}>Visit the Recipe</a>
+			</Button>
 		</article>
 	);
 };

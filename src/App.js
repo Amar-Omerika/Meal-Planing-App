@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MealList from "./MealList";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 import "./App.css";
 
 const App = () => {
@@ -24,13 +26,18 @@ const App = () => {
 	return (
 		<div className="App">
 			<section className="controls">
-				<input
+				<TextField
 					type="number"
 					placeholder="calories"
 					onChange={handleChange}
-				></input>
+					id="standard-basic"
+					label="Calories"
+				/>
 			</section>
-			<button onClick={getMealData}>Get Daily Meal Plan</button>
+			<Button variant="contained" color="primary" onClick={getMealData}>
+				Get Daily Meal Plan
+			</Button>
+
 			{mealData && <MealList mealData={mealData} />}
 		</div>
 	);
