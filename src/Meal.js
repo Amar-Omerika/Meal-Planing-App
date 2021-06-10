@@ -23,7 +23,6 @@ const Meal = ({ meal }) => {
 				<li>Preparation time: {meal.readyInMinutes} minutes</li>
 				<li>Number of servings : {meal.servings}</li>
 			</ul>
-
 			<Button variant="contained" color="primary">
 				<a href={meal.sourceUrl}>Go to Recipe</a>
 			</Button>
