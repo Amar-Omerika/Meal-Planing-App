@@ -39,7 +39,10 @@ ul {
 img {
 	width: 100%;
 	margin-bottom: 1rem;
+	border-radius: 8px;
+	opacity: 0.9;
 }
+
 article {
 	display: flex;
 	flex-direction: column;
